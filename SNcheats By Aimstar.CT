@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>130</ID>
+      <Description>"1.0 By Aimstar"</Description>
+      <Color>00FF00</Color>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>123</ID>
+      <Description>"Mecz musisz mnie aktywować"</Description>
+      <Options moHideChildren="1" moManualExpandCollapse="1"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <Color>0000FF</Color>
+      <GroupHeader>1</GroupHeader>
+      <Address/>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>111</ID>
+          <Description>"Szybkie HP"</Description>
+          <Options moAlwaysHideChildren="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+          <ShowAsSigned>0</ShowAsSigned>
+          <GroupHeader>1</GroupHeader>
+          <Address/>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Toggle Activation</Action>
+              <Keys>
+                <Key>97</Key>
+              </Keys>
+              <ID>0</ID>
+              <ActivateSound>Activate</ActivateSound>
+              <DeactivateSound>Deactivate</DeactivateSound>
+            </Hotkey>
+          </Hotkeys>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>112</ID>
+              <Description>"le"</Description>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048,"GameAssembly.dll"+18DAF02) 
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+
+movsd xmm7,[rax+3C]
+
+exit:
+jmp returnhere
+
+"GameAssembly.dll"+18DAF02:
+jmp newmem
+nop 4
+returnhere:
+
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"GameAssembly.dll"+18DAF02:
+db 0F 10 70 2C F2 0F 10 78 3C
+//movups xmm6,[rax+2C]
+//movsd xmm7,[rax+3C]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>113</ID>
+              <Description>"le"</Description>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048,"GameAssembly.dll"+18DAE4B) 
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+
+movsd xmm7,[rax+24]
+
+exit:
+jmp returnhere
+
+"GameAssembly.dll"+18DAE4B:
+jmp newmem
+nop 4
+returnhere:
+
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"GameAssembly.dll"+18DAE4B:
+db 0F 10 70 14 F2 0F 10 78 24
+//movups xmm6,[rax+14]
+//movsd xmm7,[rax+24]
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1904</ID>
+          <Description>"Nieskonczona sila"</Description>
+          <Options moAlwaysHideChildren="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+          <ShowAsSigned>0</ShowAsSigned>
+          <GroupHeader>1</GroupHeader>
+          <Address/>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Toggle Activation</Action>
+              <Keys>
+                <Key>98</Key>
+              </Keys>
+              <ID>0</ID>
+              <ActivateSound>Activate</ActivateSound>
+              <DeactivateSound>Deactivate</DeactivateSound>
+            </Hotkey>
+          </Hotkeys>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>0</ID>
+              <Description>"Auipt"</Description>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048,"GameAssembly.dll"+778EA0) 
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+
+movsd [rbx+30],xmm0
+
+exit:
+jmp returnhere
+
+"GameAssembly.dll"+778EA0:
+jmp newmem
+nop 4
+returnhere:
+
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"GameAssembly.dll"+778EA0:
+db 0F 11 4B 20 F2 0F 11 43 30
+//movups [rbx+20],xmm1
+//movsd [rbx+30],xmm0
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1915</ID>
+          <Description>"Nieskonczony Craft "</Description>
+          <Options moAlwaysHideChildren="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+          <GroupHeader>1</GroupHeader>
+          <Address/>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4157</ID>
+          <Description>"guest krzyk nie ma cooldownu"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048,"UnityPlayer.dll"+37ADEF) 
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+
+
+exit:
+jmp returnhere
+
+"UnityPlayer.dll"+37ADEF:
+jmp newmem
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"UnityPlayer.dll"+37ADEF:
+db E8 6C F5 1E 00
+//call UnityPlayer.dll+56A360
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4139</ID>
+          <Description>"Scout nie traci orzechow"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048,"GameAssembly.dll"+66AA7F) 
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+
+
+exit:
+jmp returnhere
+
+"GameAssembly.dll"+66AA7F:
+jmp newmem
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"GameAssembly.dll"+66AA7F:
+db 0F 11 83 E8 00 00 00
+//movups [rbx+000000E8],xmm0
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4158</ID>
+      <Description>"Bonus! enable me"</Description>
+      <Options moHideChildren="1"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <Color>008000</Color>
+      <GroupHeader>1</GroupHeader>
+      <Address/>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>4159</ID>
+          <Description>"Prank!!!! Kup premium cheata"</Description>
+          <GroupHeader>1</GroupHeader>
+          <Address/>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>randomvalue</Name>
+      <Address>1D514810000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"GameAssembly.dll"+3E75DD5</Address>
+      <Comment>111
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"GameAssembly.dll"+3E75DDF</Address>
+      <Comment>11
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>
